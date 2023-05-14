@@ -1,5 +1,6 @@
 .content {
    padding: 30px 30px 50px 30px;
+   overflow: hidden;
 }
 .container {
    max-width: 1200px;
@@ -577,21 +578,35 @@ transition: all 0.2s ease-out 0s;
    justify-content: space-between;
    margin-bottom: 140px;
 }
+/* .customer_cont{
+   margin-left: 140px;
+} */
 .customers__wrapper{
 
    width: 490px;
    height: 490px;
    background: #244D4D;
    border-radius: 50%;
-  
+   
+   z-index: 1;
+   
 }  
 .customers__image{
-   overflow: hidden;
+
    background: url(/images/Rectangle\ 86.svg);
-   width: 90%;
+   background-repeat: no-repeat;
+  background-position: center;
    height: 100%;
-   transform: translate(130px, 0px);
-}   
+   width: 90%;
+   z-index: 5;
+   transform: translate(70px, 0px);
+   
+}  
+.customer__image::after{
+   content: "";
+ 
+   
+} 
 .customers__title {
    max-width: 400px;
    font-family: 'Montserrat';
