@@ -37,6 +37,7 @@ color: #244D4D;
 }
 .header-menu__item-list {
    margin-right: 10px;
+   padding-bottom: 2px;
 }
 .header-menu__link {
    padding: 14px 20px;  
@@ -47,7 +48,61 @@ font-size: 16px;
 line-height: 21px;
 text-decoration: none;
 color: #161616;
+transition: all 0.3s ease;
 }
+.header-menu__item-list:hover{
+   text-decoration: underline;
+}
+.header-menu__link:hover {
+   font-weight: 500;
+   color: #2b8b8b;
+   
+ }
+ .search-container {
+   display: none;
+   position: absolute;
+   top: 90px;
+   right: 30%;
+   left: 30%;
+   border-radius: 10px;
+   background-color: #338888;
+   padding: 10px;
+   z-index: 10;
+ }
+ 
+ .search-container input[type=text] {
+   padding: 10px;
+   width: 90%;
+   border: none;
+   border-bottom: 1px solid #555;
+ }
+ 
+ .search-container button {
+   font-family: 'DM Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 21px;
+   float: right;
+   color: white;
+   transition: all 0.2s ease-in;
+   padding: 10px 15px;
+   margin-top: 8px;
+   border-radius: 10px;
+   margin-right: 16px;
+   background: #244D4D;
+   border: none;
+   cursor: pointer;
+ }
+ .search-container button:hover{
+   color: #244D4D;
+   background: #FFF;
+   box-shadow: 2px 3px 4px gray;
+}
+ .show {
+   display: block;
+ }
+ 
 .header__search{
    display: flex;
    justify-content: space-between;
@@ -377,6 +432,7 @@ color: #383738;
 }
 .popular__more{
    text-align: right;
+  margin-bottom: 10px;
 }
 .popular__more a{
    font-family: 'DM Sans';
@@ -387,6 +443,11 @@ line-height: 27px;
 /* identical to box height, or 135% */
 text-decoration:none;
 color: #FF5F00;
+transition: all 0.1s ease-in;
+}
+.popular__more a:hover{
+   border-bottom: 1px solid #FF5F00;
+   font-weight: 600;
 }
 .slider{
    width: 100%;
@@ -515,6 +576,13 @@ background: #244D4D;
 border-radius: 6px;
 padding: 5px 15px;
 color: #FFFFFF;
+transition: all 0.2s ease-in;
+cursor: pointer;
+}
+.to-buy:hover{
+   color: #244D4D;
+   background: #FFF;
+   box-shadow: 2px 3px 4px gray;
 }
 .all {
    margin-bottom: 140px;
@@ -826,10 +894,14 @@ font-size: 18px;
 line-height: 23px;
 text-decoration: none;
 color: #FFFFFF;
-
+transition: all 0.3s ease-in;
 opacity: 0.9;
 margin-bottom: 16px;
 }
+.footer__link:hover{
+   color: rgb(94, 255, 108);
+    text-decoration: underline;
+ }
 .shape {
   max-width: 340px;
 }
@@ -1128,6 +1200,10 @@ padding: 10px;
 }
 
 @media screen and (max-width: 540px){
+   .search-container{
+      right: 20%;
+      left: 20%;
+   }
    .trusted__companies{
       flex-wrap: wrap;
       justify-content: center;

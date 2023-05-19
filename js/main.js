@@ -75,19 +75,6 @@ document.querySelector('.back').addEventListener('click', () => {
    }
    console.log(count);
    rollSlider();
-   // if (count >= 4 && widthW > 1000) {
-   //    console.log(window.innerWidth)
-   //    count = 0;
-   //    rollSlider();
-   // } else if (count >= 5 && window.innerWidth < 940) {
-   //    count = 0;
-   //    rollSlider();
-   // } else if (count >= 6 && widthW < 540) {
-   //    count = 0;
-   //    rollSlider();
-   // } else {
-   //    rollSlider();
-   // }
 });
 
 function rollSlider() {
@@ -102,3 +89,12 @@ function rollSlider() {
    }
 
 }
+
+
+
+const searchIcon = document.querySelector('.glass');
+const searchContainer = document.querySelector('.search-container');
+
+searchIcon.addEventListener('click', function () {
+   searchContainer.classList.toggle('show');
+});
