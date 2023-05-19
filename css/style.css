@@ -388,17 +388,31 @@ line-height: 27px;
 text-decoration:none;
 color: #FF5F00;
 }
+.slider{
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+.slider-line{
+   display: flex;
+   
+   transition: all ease-in 1s;
+}
 .popular__cards {
    display: flex;
-   justify-content: space-between;
+   gap: 20px;
+  
 
+   margin-bottom: 10px;
 }
 .popular__card {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   box-sizing: border-box;
    background: #FFFFFF;
    box-shadow: 0px 13px 26px rgba(0, 0, 0, 0.07);
+   max-width: 33.3%;
 }
 
 .card-info {
@@ -465,6 +479,15 @@ color: #244D4D;
  }
  .like:hover{
    background: #EF5423;
+ }
+ .like2:hover .arrow-left {
+   transform: scale(1.2);   
+ }
+ .like2:hover .arrow-right {
+   transform: scale(1.2);   
+ }
+ .like2:hover{
+   background: #f0673e;
  }
 .info__to-buy {
    display: flex;
@@ -1040,21 +1063,25 @@ padding: 10px;
    }
 
    .popular__cards{
-      flex-wrap: wrap;
-      margin: 0 -40px;
+      /* flex-wrap: wrap; */
+      
    }
-   .popular__card:not(:last-child){
+   .popular__card{
       margin-bottom: 20px;
    }
    .popular__card{
-      margin: 0 20px;
+     
+      max-width: 40%;
    }
+   
   .shop__card{
    flex-wrap: wrap-reverse;
    justify-content: space-around;
   }
   .shop__image{
    margin: 100px auto 0;
+   flex: 1 1 100%;
+    text-align: center;
   }
   .customers{
    justify-content: space-around;
@@ -1074,12 +1101,19 @@ padding: 10px;
 
    }
    .wrapper{
-      padding: 0 30px;
+      
       flex-direction: column;
       align-content: center;
    }
    .shape{
       margin-bottom: 30px;
+      padding: 0 30px;
+   }
+   .tour{
+      padding: 0 30px;
+   }
+   .company{
+      padding: 0 30px;
    }
    .tour__links{
       display: none;
@@ -1089,12 +1123,14 @@ padding: 10px;
    }
    .subscribe3{
       margin-bottom: 40px;
+      padding: 0 30px;
    }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 540px){
    .trusted__companies{
       flex-wrap: wrap;
+      justify-content: center;
    }
    .card-img{
       margin-right: 10px;
@@ -1109,9 +1145,13 @@ padding: 10px;
    .shop__card img{
       width: 90%;
    }
-   .popular__card{
-      margin: 0;
+   .popular__cards{
+      
    }
+   .popular__card{
+     width: 100%;
+   }
+
    .customers{
       flex-direction: column-reverse;
    }
@@ -1126,7 +1166,10 @@ padding: 10px;
    .subscribe__email{
       min-width: 0;
    }
-   /* .subscribe__wrapper{
-      min-width: 420px;
-   } */
+   .wrapper{
+      padding: 0;
+      padding-left: 30px;
+      box-sizing: border-box;
+      max-width: 420px;
+   }
 }
