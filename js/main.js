@@ -4,8 +4,6 @@ const popularCards = document.querySelector('.popular__cards')
 let width;
 let count = 0;
 
-
-
 function init() {
    let widthW = window.innerWidth;
    console.log('resize');
@@ -92,9 +90,68 @@ function rollSlider() {
 
 
 
-const searchIcon = document.querySelector('.glass');
+
+
+const searchIcon = document.querySelector('.glass__container');
 const searchContainer = document.querySelector('.search-container');
 
 searchIcon.addEventListener('click', function () {
    searchContainer.classList.toggle('show');
 });
+
+
+
+
+
+const navToggle = document.querySelector(".menu__icon");
+const links = document.querySelector(".header-menu__list");
+const menu = document.querySelector(".header__menu");
+
+navToggle.addEventListener("click", function () {
+   menu.classList.toggle("show-links");
+
+   if (menu.style.display == "block") {
+      menu.style.display = "none";
+
+   } else {
+      menu.style.display = "block";
+
+   }
+});
+
+
+
+
+
+const shopBy = document.querySelectorAll(".shop-by");
+shopBy.forEach(el => {
+   el.addEventListener('click', function () {
+      setActive(this);
+   });
+});
+function setActive(element) {
+   shopBy.forEach(el => {
+      el.classList.remove('active');
+   });
+   element.classList.add('active')
+}
+
+
+const shopItem = document.querySelectorAll(".shop__item");
+
+shopItem.forEach(el => {
+   el.addEventListener('click', function () {
+      setActiveItem(this);
+   });
+});
+function setActiveItem(element) {
+   shopItem.forEach(el => {
+      el.classList.remove('activeItem');
+      el.children[1].style.color = "#808080";
+   });
+   element.classList.add('activeItem')
+   element.children[1].style.color = "#fff";
+}
+
+
+
