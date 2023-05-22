@@ -155,3 +155,24 @@ function setActiveItem(element) {
 
 
 
+
+
+const questions = document.querySelectorAll(".question");
+
+questions.forEach(question => {
+   const btn = question.querySelector(".question-btn");
+   // console.log(btn);
+
+   question.addEventListener("click", function () {
+      console.log(question);
+
+      questions.forEach(function (item) {
+         if (item !== question) {
+            item.classList.remove("show-text");
+            // item.children[1].style.display = "none";
+         }
+      });
+      // question.children[1].style.display = "block";
+      question.classList.toggle("show-text");
+   });
+});

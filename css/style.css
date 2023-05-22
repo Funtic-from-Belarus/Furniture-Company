@@ -1,3 +1,7 @@
+html{
+   scroll-behavior: smooth;
+   font-size: 16px;
+}
 .content {
    padding: 30px 30px 50px 30px;
    overflow: hidden;
@@ -19,7 +23,7 @@
    font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 29px;
 /* identical to box height */
 text-decoration: none;
@@ -48,7 +52,7 @@ color: #244D4D;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
+font-size: 1rem;
 line-height: 21px;
 text-decoration: none;
 color: #161616;
@@ -380,7 +384,7 @@ color: #383738;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 26px;
 /* identical to box height, or 108% */
 
@@ -602,7 +606,7 @@ color: #244D4D;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 31px;
 /* identical to box height, or 129% */
 
@@ -653,7 +657,7 @@ margin-bottom: 30px;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 27px;
 /* identical to box height, or 112% */
 cursor: pointer;
@@ -701,6 +705,8 @@ color: #919090;
 }
 .activeItem{
    background: #154444;
+}
+.activeItem .item__text{
    color: white;
 }
 .item__icon{
@@ -711,7 +717,7 @@ color: #919090;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 1rem;
 line-height: 21px;
 /* identical to box height, or 131% */
 color: #808080;
@@ -817,7 +823,7 @@ color: #383738;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 1rem;
 line-height: 19px;
 /* identical to box height, or 119% */
 
@@ -923,13 +929,19 @@ border-radius: 10px;
 font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 1rem;
 line-height: 22px;
 /* identical to box height, or 138% */
 border: none;
 
 color: #FFFFFF;
-
+transition: all 0.3s linear;
+}
+.subscribe__register:hover, .subscribe__register:focus{
+   color: #FFB624;
+   background: white;
+   border: 2px solid #FFB624;
+   box-shadow: 0px 0px 10px 2px #FFB624 inset;
 }
 .footer {
    background: #305F64;
@@ -976,7 +988,7 @@ margin-bottom: 16px;
    font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 29px;
 
 color: #FFFFFF;
@@ -986,7 +998,7 @@ margin-bottom: 30px;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
+font-size: 1rem;
 line-height: 24px;
 /* or 150% */
 
@@ -1058,18 +1070,31 @@ margin-bottom: 20px;
 }
 .tour {
    max-width: 120px;
+   transition: all 0.3s linear;
 }
 .tour__links {
    display: flex;
    flex-direction: column;
-   
+   transition: all 0.3s linear .3s;
 }
 .company {
    max-width: 120px;
+   transition: all 0.3s linear;
+
 }
 .company__links {
    display: flex;
    flex-direction: column;
+   transition: all 0.3s linear .3s;
+   }
+.show-text .links{
+   display: block;
+   margin-bottom: 20px;
+}
+.links a{
+   
+   display: block;
+   margin-bottom: 10px;
 }
 .subscribe3 {
    max-width: 260px;
@@ -1119,6 +1144,10 @@ transition: all .3s linear;
    border: none;
    position: relative;
    cursor: pointer;
+   transition: all .3s linear;
+}
+.subscribe3__register:hover{
+   transform: scale(1.2);
 }
 
 .arrow {
@@ -1166,7 +1195,7 @@ transition: all .3s linear;
       
    }
    .header-menu__item-list a{
-      font-size: 24px;
+      font-size: 1.5rem;
      
    }
    .header-menu__item-list{
@@ -1322,6 +1351,9 @@ transition: all .3s linear;
    .customers__info{
       max-width: 90%;
       margin-bottom: 30px;
+   }
+   .customers__card{
+      margin-left: 15px;
    }
    .subscribe__email{
       min-width: 0;

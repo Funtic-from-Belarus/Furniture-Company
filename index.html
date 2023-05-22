@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>DudeShape</title>
+  <link rel="shortcut icon" href="images/1936911_archive_chest_drawer_furniture_keep_icon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +26,9 @@
         <nav class="header__menu">
           <ul class="header-menu__list ">
             <li class="header-menu__item-list "><a href="#" class="header-menu__link">Home</a></li>
-            <li class="header-menu__item-list "><a href="#" class="header-menu__link">About</a></li>
-            <li class="header-menu__item-list "><a href="#" class="header-menu__link">Features</a></li>
-            <li class="header-menu__item-list "><a href="#" class="header-menu__link">Contact</a></li>
+            <li class="header-menu__item-list "><a href="#about" class="header-menu__link">About</a></li>
+            <li class="header-menu__item-list "><a href="#features" class="header-menu__link">Features</a></li>
+            <li class="header-menu__item-list "><a href="#contact" class="header-menu__link">Contact</a></li>
           </ul>
         </nav>
         <div class="header__search">
@@ -65,7 +66,7 @@
         <div class="compani"><img src="images/Frame 15.svg" alt=""></div>
       </div>
     </div>
-    <div class="about-us container">
+    <div class="about-us container" id="about">
       <div class="about-us__info">
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__subtitle">All of our furniture uses the best materials and choices for our customers.All of
@@ -96,7 +97,7 @@
       </div>
       <div class="about-us__image"><img src="images/Rectangle 3.svg" alt=""></div>
     </div>
-    <div class="popular container">
+    <div class="popular container" id="features">
       <h2 class="popular__title">Our Popular Furniture</h2>
       <div class="popular__subtitle-slider">
         <p class="popular__subtitle">All of our furniture uses the best materials and choices for our customers.All of
@@ -270,11 +271,8 @@
             </div>
           </div>
           <div class="shop__items">
-            <div class="shop__item">
-
+            <div class="shop__item activeItem">
               <img src="images/workplace 1.svg" alt="" class="item__icon" width="24px" height="24px">
-
-
               <p class="item__text">Office</p>
             </div>
             <div class="shop__item">
@@ -326,7 +324,7 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="wrapper container">
       <div class="shape ">
         <h2 class="shape__title">DudeShape</h2>
@@ -343,18 +341,18 @@
           </div>
         </div>
       </div>
-      <div class="tour">
+      <div class="tour question">
         <h2 class="tour__title footer__title">Take a tour</h2>
-        <div class="tour__links">
+        <div class="tour__links links">
           <a href="" class="tour__link footer__link">Features</a>
           <a href="" class="tour__link footer__link">Pricing</a>
           <a href="" class="tour__link footer__link">Product</a>
           <a href="" class="tour__link footer__link">Support</a>
         </div>
       </div>
-      <div class="company">
+      <div class="company question">
         <h2 class="company__title footer__title">Our company</h2>
-        <div class="company__links">
+        <div class="company__links links">
           <a href="" class="company__link footer__link">About Us</a>
           <a href="" class="company__link footer__link">Blog</a>
           <a href="" class="company__link footer__link">Media</a>
@@ -363,7 +361,7 @@
       </div>
       <div class="subscribe3">
         <h2 class="subscribe3__title footer__title">Subscribe</h2>
-        <a href="#" class="subscribe3__more-info ">Subscribe to get the latest news from us</a>
+        <p class="subscribe3__more-info ">Subscribe to get the latest news from us</p>
         <div class="subscribe3__email">
           <form action="#" method="get" class="subscribe3__form">
             <input type="email" placeholder="Enter your email">
