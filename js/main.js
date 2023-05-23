@@ -176,3 +176,35 @@ questions.forEach(question => {
       question.classList.toggle("show-text");
    });
 });
+
+
+
+
+
+const button = document.querySelector('.btn');
+
+const displayButton = () => {
+   window.addEventListener('scroll', () => {
+      console.log(window.scrollY);
+
+      if (window.scrollY > 100) {
+         button.classList.add("show");
+      } else {
+         button.classList.remove("show");
+      }
+   });
+};
+
+const scrollToTop = () => {
+   button.addEventListener("click", () => {
+      window.scroll({
+         top: 0,
+         left: 0,
+         behavior: 'smooth'
+      });
+      console.log(event);
+   });
+};
+
+displayButton();
+scrollToTop();
