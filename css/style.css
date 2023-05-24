@@ -726,9 +726,17 @@ color: #919090;
    flex-direction: column;
    flex-wrap: wrap;
    justify-content: space-around;
-   
-
 }
+.shop__items1{
+   display: none;
+}
+
+.items__active{
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
 .shop__item {
    min-width: 222px;
    min-height: 90px;

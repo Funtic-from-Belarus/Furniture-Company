@@ -208,3 +208,28 @@ const scrollToTop = () => {
 
 displayButton();
 scrollToTop();
+
+
+
+
+
+const allShop = document.querySelector(".all__shop");
+const btns = document.querySelectorAll(".shop-by");
+const shopItems1 = document.querySelectorAll(".shop__items1");
+allShop.addEventListener("click", function (e) {
+   const id = e.target.dataset.id;
+   if (id) {
+      // remove selected from other buttons
+      btns.forEach(function (btn) {
+         btn.classList.remove("active");
+      });
+      e.target.classList.add("active");
+      // hide other articles
+      shopItems1.forEach(function (article) {
+         article.classList.remove("items__active");
+         console.log('max');
+      });
+      const element = document.getElementById(id);
+      element.classList.add("items__active");
+   }
+});
